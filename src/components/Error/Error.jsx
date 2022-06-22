@@ -1,8 +1,12 @@
+import page404 from "../../assets/page404.png"
+import StyledError from "./errorStyle";
+
 function Error() {
   return (
-    <div>
-      <h1>Oups 🙈 Cette page n'existe pas</h1>
-    </div>
+    <StyledError>
+      <img src={page404} alt="erreur404" />
+      <h1>Oups 🙈 Il semble que cette page n'existe pas...</h1>
+    </StyledError>
   );
 }
 
