@@ -4,11 +4,12 @@ import colors from "../../utils/style/colors";
 const StyledHomePage = styled.div`
 
   display: flex;
-  background: ${colors.backgroundLight};
+  background-color: ${colors.backgroundLight};
   margin: 50px;
   padding: 10px;
   justify-content: space-around;
   height: calc(85vh - 110px);
+  border-radius: 15px;
   
   .bloc-home {
     display: flex;
