@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const MainContainer = styled.div`
+  
+  margin: 25px 0;
 
   h1 {
     text-align: center;

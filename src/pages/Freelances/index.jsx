@@ -16,13 +16,38 @@ const freelanceProfiles = [
     picture: DefaultPicture
   },
   {
+    name: "Norbert Dragonneau",
+    jobTitle: "Développeur Mobile",
+    picture: DefaultPicture
+  },
+  {
+    name: "Tina Goldstein",
+    jobTitle: "UX-UI Designer",
+    picture: DefaultPicture
+  },
+  {
+    name: "Jacob Kowalski",
+    jobTitle: "Dev React/React Native",
+    picture: DefaultPicture
+  },
+  {
+    name: "Queenie Goldstein",
+    jobTitle: "Développeuse Symfony",
+    picture: DefaultPicture
+  },
+  {
     name: "Hermione Granger",
     jobTitle: "Développeuse Fullstack",
     picture: DefaultPicture
   },
   {
+    name: "Ginny Weasley",
+    jobTitle: "Développeuse VueJS",
+    picture: DefaultPicture
+  },
+  {
     name: "Ronald Weasley",
-    jobTitle: "Développeur Backend",
+    jobTitle: "Développeur React/Node",
     picture: DefaultPicture
   }
 ];

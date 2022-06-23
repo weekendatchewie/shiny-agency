@@ -40,6 +40,7 @@ const CardWrapper = styled.div`
     width: 100px;
     border-radius: 50%;
     margin: 12px;
+    border: 4px solid ${colors.primary};
   }
 `;
 

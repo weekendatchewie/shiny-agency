@@ -12,7 +12,7 @@ function Header() {
       <nav>
         <Link to="/">Accueil</Link>
         <Link to="/freelances">Freelances</Link>
-        <Link className="link-bckg" to="/survey/1" $isFullLink>
+        <Link className="link-bckg" to="/survey/1">
           Faire le test
         </Link>
       </nav>
