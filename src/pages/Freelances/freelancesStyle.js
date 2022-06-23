@@ -15,6 +15,13 @@ const MainContainer = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     justify-items: center;
   }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
 `;
 
 export default MainContainer;

@@ -5,19 +5,37 @@ import { Loader } from "../../utils/style/atoms";
 
 function Survey() {
 
-  const [surveyData, setssurveyData] = useState({});
+  const [surveyData, setSurveyData] = useState({});
   const [isDataLoading, setIsDataLoading] = useState(false);
+
+  // useEffect(() => {
+  //   setIsDataLoading(true);
+  //   fetch("http://localhost:8000/survey")
+  //     .then(response => response.json())
+  //     .then(({ surveyData }) => {
+  //       setssurveyData(surveyData);
+  //       setIsDataLoading(false);
+  //     })
+  //     .catch((error) => console.log(error));
+  //
+  // }, []);
 
   useEffect(() => {
     setIsDataLoading(true);
-    fetch("http://localhost:8000/survey")
-      .then(response => response.json())
-      .then(({ surveyData }) => {
-        setssurveyData(surveyData);
-        setIsDataLoading(false);
-      })
-      .catch((error) => console.log(error));
 
+    async function loadSurvey() {
+      try {
+        const response = await fetch("http://localhost:8000/survey");
+        const { surveyData } = await response.json();
+        setSurveyData(surveyData);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsDataLoading(false);
+      }
+    }
+
+    loadSurvey();
   }, []);
 
   const { questionNumber } = useParams();
