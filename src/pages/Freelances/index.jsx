@@ -4,65 +4,73 @@ import MainContainer from "./freelancesStyle";
 import { useEffect, useState } from "react";
 import { Loader } from "../../utils/style/atoms";
 
-// const DefaultPicture = "https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80";
+const DefaultPicture = "https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80";
 
-// const freelanceProfiles = [
-//   {
-//     name: "Luna Lovegood",
-//     jobTitle: "Devops",
-//     picture: DefaultPicture
-//   },
-//   {
-//     name: "Harry Potter",
-//     jobTitle: "Développeur Frontend",
-//     picture: DefaultPicture
-//   },
-//   {
-//     name: "Norbert Dragonneau",
-//     jobTitle: "Développeur Mobile",
-//     picture: DefaultPicture
-//   },
-//   {
-//     name: "Tina Goldstein",
-//     jobTitle: "UX-UI Designer",
-//     picture: DefaultPicture
-//   },
-//   {
-//     name: "Jacob Kowalski",
-//     jobTitle: "Dev React/React Native",
-//     picture: DefaultPicture
-//   },
-//   {
-//     name: "Queenie Goldstein",
-//     jobTitle: "Développeuse Symfony",
-//     picture: DefaultPicture
-//   },
-//   {
-//     name: "Hermione Granger",
-//     jobTitle: "Développeuse Fullstack",
-//     picture: DefaultPicture
-//   },
-//   {
-//     name: "Ginny Weasley",
-//     jobTitle: "Développeuse VueJS",
-//     picture: DefaultPicture
-//   },
-//   {
-//     name: "Ronald Weasley",
-//     jobTitle: "Développeur React/Node",
-//     picture: DefaultPicture
-//   }
-// ];
-
+const freelanceProfiles = [
+  {
+    name: "Luna Lovegood",
+    job: "Devops",
+    picture: DefaultPicture
+  },
+  {
+    name: "Harry Potter",
+    job: "Développeur Frontend",
+    picture: DefaultPicture
+  },
+  {
+    name: "Norbert Dragonneau",
+    job: "Développeur Mobile",
+    picture: DefaultPicture
+  },
+  {
+    name: "Tina Goldstein",
+    job: "UX-UI Designer",
+    picture: DefaultPicture
+  },
+  {
+    name: "Jacob Kowalski",
+    job: "Dev React/React Native",
+    picture: DefaultPicture
+  },
+  {
+    name: "Queenie Goldstein",
+    job: "Développeuse Symfony",
+    picture: DefaultPicture
+  },
+  {
+    name: "Hermione Granger",
+    job: "Développeuse Fullstack",
+    picture: DefaultPicture
+  },
+  {
+    name: "Ginny Weasley",
+    job: "Développeuse VueJS",
+    picture: DefaultPicture
+  },
+  {
+    name: "Ronald Weasley",
+    job: "Développeur React/Node",
+    picture: DefaultPicture
+  }
+];
 
 function Index() {
 
-  const [freelancesData, setFreelancesData] = useState([]);
+  const [freelancesData, setFreelancesData] = useState(null);
   const [isDataLoading, setIsDataLoading] = useState(false);
+
+  function mapData() {
+    let dataToMap=freelanceProfiles ;
+    if (freelancesData) {
+      dataToMap = freelancesData;
+    } else {
+      dataToMap = freelanceProfiles;
+    }
+    return dataToMap;
+  }
 
   useEffect(() => {
     setIsDataLoading(true);
-
     async function loadFreelances() {
       try {
         const response = await fetch("http://localhost:8000/freelances");
@@ -88,7 +96,7 @@ function Index() {
         </div>
         :
         <div className="card-container">
-          {freelancesData.map((item, index) => (
+          {mapData().map((item, index) => (
             <Card key={`${item.name}-${index}`}
                   label={item.name}
                   title={item.job}
