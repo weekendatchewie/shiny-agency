@@ -60,7 +60,7 @@ function Index() {
   const [isDataLoading, setIsDataLoading] = useState(false);
 
   function mapData() {
-    let dataToMap=freelanceProfiles ;
+    let dataToMap = freelanceProfiles;
     if (freelancesData) {
       dataToMap = freelancesData;
     } else {

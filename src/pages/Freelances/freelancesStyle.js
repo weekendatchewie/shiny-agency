@@ -14,6 +14,7 @@ const MainContainer = styled.div`
     padding: 15px;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     justify-items: center;
+    margin: 50px 0;
   }
   
   .loader {

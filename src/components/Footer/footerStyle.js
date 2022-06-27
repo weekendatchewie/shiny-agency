@@ -6,15 +6,15 @@ const StyledFooter = styled.footer`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-top: 60px;
-
-  button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  padding: 30px 0;
+  background-color: #F9F9FC;
+  margin-top: auto;
+  
+  p {
     color: ${colors.secondary};
+    font-size: 14px;
   }
-
+  
 `;
 
 export default StyledFooter;

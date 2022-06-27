@@ -1,9 +1,10 @@
 import StyledFooter from "./footerStyle";
 
 function Footer() {
+
   return (
     <StyledFooter>
-      <button>Changer de mode</button>
+      <p>Made with ❤️</p>
     </StyledFooter>
   );
 }

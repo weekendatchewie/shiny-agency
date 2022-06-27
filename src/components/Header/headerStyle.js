@@ -11,6 +11,10 @@ const StyledNavbar = styled.div`
   img {
     width: 130px;
   }
+  
+  nav {
+    display: flex;
+  }
 
   a {
     padding: 15px;
@@ -34,6 +38,14 @@ const StyledNavbar = styled.div`
     border-radius: 15px;
     background-color: ${colors.primary};
     padding: 15px 30px;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: ${colors.secondary};
+    font-size: 35px;
   }
 `;
 

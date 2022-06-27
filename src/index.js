@@ -11,42 +11,41 @@ import Index from "./pages/Freelances";
 
 import Header from "./components/Header/Header";
 import Error from "./components/Error/Error";
-// import { createGlobalStyle } from "styled-components";
+import Footer from "./components/Footer";
+import { ThemeProvider } from "./utils/context";
+import GlobalStyle from "./utils/style/GlobalStyle";
 
-
-// const globalStyles = createGlobalStyle`
-//   div {
-//     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-//   }
-//
-// `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
   <Router>
-    {/*<globalStyles />*/}
-    <Header />
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/survey/:questionNumber">
-        <Survey />
-      </Route>
-      <Route path="/results">
-        <Results />
-      </Route>
-      <Route path="/freelances">
-        <Index />
-      </Route>
-      <Route>
-        <Error />
-      </Route>
-    </Switch>
+    <ThemeProvider>
+      <GlobalStyle />
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/survey/:questionNumber">
+          <Survey />
+        </Route>
+        <Route path="/results">
+          <Results />
+        </Route>
+        <Route path="/freelances">
+          <Index />
+        </Route>
+        <Route>
+          <Error />
+        </Route>
+      </Switch>
+      <Footer />
+      </ThemeProvider>
   </Router>
-  // </React.StrictMode>
-);
+// </React.StrictMode>
+)
+;
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
