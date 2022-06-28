@@ -9,12 +9,12 @@ const StyledFooter = styled.footer`
   padding: 30px 0;
   background-color: #F9F9FC;
   margin-top: auto;
-  
+
   p {
     color: ${colors.secondary};
     font-size: 14px;
   }
-  
+
 `;
 
 export default StyledFooter;

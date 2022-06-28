@@ -9,7 +9,7 @@ const CardWrapper = styled.div`
   background-color: ${colors.backgroundLight};
   border-radius: 30px;
   width: 60%;
-  transition: background-color .3s;
+  transition: background-color .4s;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ const CardWrapper = styled.div`
     width: 100%;
     text-align: center;
   }
-  
+
   .span-name {
     font-size: 16px;
     font-weight: 500;

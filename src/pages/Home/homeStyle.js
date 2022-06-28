@@ -10,7 +10,7 @@ const StyledHomePage = styled.div`
   justify-content: space-around;
   height: calc(85vh - 110px);
   border-radius: 15px;
-  
+
   .bloc-home {
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@ const StyledHomePage = styled.div`
     font-size: 45px;
     font-weight: 600;
   }
-  
+
   a {
     color: white;
     border-radius: 15px;
@@ -35,16 +35,16 @@ const StyledHomePage = styled.div`
     margin: 0 15px;
     width: 25%;
     text-align: center;
-    
+
     :hover {
       filter: brightness(1.5);
     }
   }
-  
+
   img {
     width: 35%;
   }
-  
+
 `;
 
 

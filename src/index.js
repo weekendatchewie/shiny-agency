@@ -12,7 +12,7 @@ import Index from "./pages/Freelances";
 import Header from "./components/Header/Header";
 import Error from "./components/Error/Error";
 import Footer from "./components/Footer";
-import { ThemeProvider } from "./utils/context";
+import { SurveyProvider, ThemeProvider } from "./utils/context";
 import GlobalStyle from "./utils/style/GlobalStyle";
 
 
@@ -21,6 +21,7 @@ root.render(
   // <React.StrictMode>
   <Router>
     <ThemeProvider>
+      <SurveyProvider>
       <GlobalStyle />
       <Header />
       <Switch>
@@ -41,6 +42,7 @@ root.render(
         </Route>
       </Switch>
       <Footer />
+      </SurveyProvider>
       </ThemeProvider>
   </Router>
 // </React.StrictMode>

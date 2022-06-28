@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const MainContainer = styled.div`
-  
+
   margin: 25px 0;
 
   h1 {
@@ -16,7 +16,7 @@ const MainContainer = styled.div`
     justify-items: center;
     margin: 50px 0;
   }
-  
+
   .loader {
     display: flex;
     justify-content: center;
