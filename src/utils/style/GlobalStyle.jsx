@@ -18,6 +18,7 @@ const StyledGlobalStyle = createGlobalStyle`
   body {
     background-color: ${({ isDarkMode }) => (isDarkMode ? "#2F2E41" : "white")};
     min-height: 100vh;
+    transition: background-color .4s;
     //margin: 0;
   }
 

@@ -6,6 +6,7 @@ const MainContainer = styled.div`
 
   h1 {
     text-align: center;
+    color: ${({ theme }) => theme === 'light' ? 'black' : 'white'};
   }
 
   .card-container {

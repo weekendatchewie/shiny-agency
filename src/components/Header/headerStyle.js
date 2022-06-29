@@ -18,7 +18,7 @@ const StyledNavbar = styled.div`
 
   a {
     padding: 15px;
-    color: #8186a0;
+    color: ${({ theme }) => theme === 'light' ? '#8186a0' : 'white'};
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -26,10 +26,11 @@ const StyledNavbar = styled.div`
     margin: 0 15px;
 
     /* Quand le style est extrait dans un autre fichier, cette syntaxe pour utiliser les props ne fonctionne */
-
-    ${(props) => props.$isFullLink && `color: white; border-radius: 30px; background-color: ${colors.primary};`}
+    ${(props ) => props.$isFullLink && `color: white; border-radius: 30px; background-color: ${colors.primary};`}
+    
+    
     &:hover {
-      filter: brightness(1.5);
+      filter: ${({ theme }) => theme === 'light' ? 'brightness(1.5)' : 'brightness(0.7)'};
     }
   }
 

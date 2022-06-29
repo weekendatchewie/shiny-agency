@@ -3,22 +3,20 @@ import { Link } from "react-router-dom";
 import StyledNavbar from "./headerStyle";
 
 import logo from "../../assets/dark-logo.png";
-import { useContext } from "react";
-import { ThemeContext } from "../../utils/context";
-
+import { useTheme } from "../../utils/hooks";
 
 function Header() {
     
-    const { theme, toggleTheme } = useContext(ThemeContext);
+    const { theme, toggleTheme } = useTheme();
     
     return (
-        <StyledNavbar>
+        <StyledNavbar theme={theme}>
             <img src={logo} alt="logo" />
             <nav>
                 <button onClick={() => toggleTheme()}>{theme === "light" ? "☀️" : "🌙"}</button>
                 <Link to="/">Accueil</Link>
                 <Link to="/freelances">Freelances</Link>
-                <Link className="link-bckg" to="/survey/1">
+                <Link $isfulllink className="link-bckg" to="/survey/1">
                     Faire le test
                 </Link>
             </nav>

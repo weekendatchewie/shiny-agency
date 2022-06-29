@@ -4,7 +4,7 @@ import colors from "../../utils/style/colors";
 const StyledHomePage = styled.div`
 
   display: flex;
-  background-color: ${colors.backgroundLight};
+  background-color: ${({ theme }) => (theme === "light" ? colors.backgroundLight : colors.mulledWine )};
   margin: 50px;
   padding: 10px;
   justify-content: space-around;
@@ -21,6 +21,7 @@ const StyledHomePage = styled.div`
   p {
     font-size: 45px;
     font-weight: 600;
+    color: ${({ theme }) => (theme === "light" ? 'black' : 'white' )}
   }
 
   a {

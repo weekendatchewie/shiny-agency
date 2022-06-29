@@ -3,6 +3,7 @@ import Card from "../../components/Card";
 import MainContainer from "./freelancesStyle";
 import { useEffect, useState } from "react";
 import { Loader } from "../../utils/style/atoms";
+import { useTheme } from "../../utils/hooks";
 
 const DefaultPicture = "https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80";
 
@@ -59,6 +60,8 @@ function Index() {
     const [freelancesData, setFreelancesData] = useState(null);
     const [isDataLoading, setIsDataLoading] = useState(false);
     
+    const { theme } = useTheme()
+    
     function mapData() {
         let dataToMap = freelanceProfiles;
         if (freelancesData) {
@@ -89,7 +92,7 @@ function Index() {
     
     
     return (
-        <MainContainer>
+        <MainContainer theme={theme}>
             <h1>Profils de nos freelances 💻</h1>
             {isDataLoading ?
                 <div className="loader">
@@ -102,6 +105,7 @@ function Index() {
                               label={item.name}
                               title={item.job}
                               picture={item.picture}
+                              theme={theme}
                         />
                     ))}
                 </div>

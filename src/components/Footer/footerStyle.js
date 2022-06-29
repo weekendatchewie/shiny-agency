@@ -7,11 +7,11 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: center;
   padding: 30px 0;
-  background-color: #F9F9FC;
+  background-color: ${({ theme }) => theme === 'light' ? colors.backgroundLight : colors.mulledWine};
   margin-top: auto;
 
   p {
-    color: ${colors.secondary};
+    color: ${({ theme }) => theme === 'light' ? colors.secondary : 'white'};
     font-size: 14px;
   }
 

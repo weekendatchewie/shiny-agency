@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import CardWrapper from "./cardStyle";
 
 
-function Card({ label, title, picture }) {
+function Card({ label, title, picture, theme }) {
     return (
-        <CardWrapper>
+        <CardWrapper theme={theme}>
             <span>{title}</span>
             <img src={picture} alt="freelance" />
             <span className="span-name">{label}</span>
