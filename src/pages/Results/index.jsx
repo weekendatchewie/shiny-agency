@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import StyledResults from "./resultsStyle";
 
 
-function formatFetchParams(answers) {
+export function formatFetchParams(answers) {
     const answerNumbers = Object.keys(answers)
     
     return answerNumbers.reduce((previousParams, answerNumber, index) => {
@@ -18,6 +18,13 @@ function formatFetchParams(answers) {
     }, '')
 }
 
+
+export function formatJobList(title, listLength, index) {
+    if (index === listLength - 1) {
+        return title
+    }
+    return `${title},`
+}
 
 function Results() {
     
@@ -52,8 +59,7 @@ function Results() {
                             key={`result-title-${index}-${result.title}`}
                             theme={theme}
                         >
-                            {result.title}
-                            {index === resultsData.length - 1 ? "" : ","}
+                            {formatJobList(result.title, resultsData.length, index)}
                         </span>
                     ))}
             </h2>
