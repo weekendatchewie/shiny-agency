@@ -7,11 +7,9 @@ import { useFetch } from "../../utils/hooks";
 
 function Survey() {
     
-    const [error, setError] = useState(false);
-    
     const { questionNumber } = useParams();
     
-    const { data, isLoading } = useFetch("http://localhost:8000/survey");
+    const { data, isLoading, error } = useFetch("http://localhost:8000/survey");
     
     const { surveyData } = data;
     
